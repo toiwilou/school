@@ -23,11 +23,11 @@
 </div>
 
 {% if isEmailSuccess == true %}
-    <div>
+    <div class="formations">
         <p>C'est parfait {{ firstname }}</p>
         <p>Veuillez choisir une formation</p>
         {% for faculty in faculties %}
-            <div class="formations">
+            <div>
                 <h3> {{ faculty.name }} </h3>
                 {% for department in departments %}
                     {% if faculty.id == department.faculty.id %}
@@ -37,7 +37,6 @@
                                 {% if department.id == formation.department.id %}
                                     <div>
                                         <span> {{ formation.name }} </span>
-                                        </div>
                                         {% for level in levels %}
                                             {% if formation.id == level.formation.id %}
                                                 <div class="form-check">
@@ -80,6 +79,11 @@
         </div>
     </div>
 {% endif %}
+
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Je m'inscris pour la première fois</label>
+</div>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">

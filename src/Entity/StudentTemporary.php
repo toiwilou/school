@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\StudentRepository;
+use App\Repository\StudentTemporaryRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=StudentRepository::class)
+ * @ORM\Entity(repositoryClass=StudentTemporaryRepository::class)
  */
-class Student
+class StudentTemporary
 {
     /**
      * @ORM\Id
@@ -43,32 +43,6 @@ class Student
     private $address;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $password;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=Level::class, inversedBy="students")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $level;
-
-    /**
-     * @ORM\Column(type="datetime_immutable")
-     */
-    private $created_at;
-
-    /**
-     * @ORM\Column(type="datetime_immutable")
-     */
-    private $updated_at;
-
-    /**
-     * @ORM\Column(type="json", nullable=true)
-     */
-    private $favorites = [];
-
-    /**
      * @ORM\Column(type="date")
      */
     private $birthday;
@@ -79,9 +53,15 @@ class Student
     private $gender;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255)
      */
-    private $registration_number;
+    private $password;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Level::class, inversedBy="studentTemporaries")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $level;
 
     public function getId(): ?int
     {
@@ -148,66 +128,6 @@ class Student
         return $this;
     }
 
-    public function getPassword(): ?string
-    {
-        return $this->password;
-    }
-
-    public function setPassword(string $password): self
-    {
-        $this->password = $password;
-
-        return $this;
-    }
-
-    public function getLevel(): ?Level
-    {
-        return $this->level;
-    }
-
-    public function setLevel(?Level $level): self
-    {
-        $this->level = $level;
-
-        return $this;
-    }
-
-    public function getCreatedAt(): ?\DateTimeImmutable
-    {
-        return $this->created_at;
-    }
-
-    public function setCreatedAt(\DateTimeImmutable $created_at): self
-    {
-        $this->created_at = $created_at;
-
-        return $this;
-    }
-
-    public function getUpdatedAt(): ?\DateTimeImmutable
-    {
-        return $this->updated_at;
-    }
-
-    public function setUpdatedAt(\DateTimeImmutable $updated_at): self
-    {
-        $this->updated_at = $updated_at;
-
-        return $this;
-    }
-
-    public function getFavorites(): ?array
-    {
-        return $this->favorites;
-    }
-
-    public function setFavorites(?array $favorites): self
-    {
-        $this->favorites = $favorites;
-
-        return $this;
-    }
-
     public function getBirthday(): ?\DateTimeInterface
     {
         return $this->birthday;
@@ -232,14 +152,26 @@ class Student
         return $this;
     }
 
-    public function getRegistrationNumber(): ?int
+    public function getPassword(): ?string
     {
-        return $this->registration_number;
+        return $this->password;
     }
 
-    public function setRegistrationNumber(int $registration_number): self
+    public function setPassword(string $password): self
     {
-        $this->registration_number = $registration_number;
+        $this->password = $password;
+
+        return $this;
+    }
+
+    public function getLevel(): ?Level
+    {
+        return $this->level;
+    }
+
+    public function setLevel(?Level $level): self
+    {
+        $this->level = $level;
 
         return $this;
     }
