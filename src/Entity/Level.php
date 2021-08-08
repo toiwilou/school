@@ -35,9 +35,15 @@ class Level
      */
     private $students;
 
+    /**
+     * @ORM\OneToMany(targetEntity=TeachingUnit::class, mappedBy="level", orphanRemoval=true)
+     */
+    private $teachingUnits;
+
     public function __construct()
     {
         $this->students = new ArrayCollection();
+        $this->teachingUnits = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -93,6 +99,36 @@ class Level
             // set the owning side to null (unless already changed)
             if ($student->getLevel() === $this) {
                 $student->setLevel(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|TeachingUnit[]
+     */
+    public function getTeachingUnits(): Collection
+    {
+        return $this->teachingUnits;
+    }
+
+    public function addTeachingUnit(TeachingUnit $teachingUnit): self
+    {
+        if (!$this->teachingUnits->contains($teachingUnit)) {
+            $this->teachingUnits[] = $teachingUnit;
+            $teachingUnit->setLevel($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTeachingUnit(TeachingUnit $teachingUnit): self
+    {
+        if ($this->teachingUnits->removeElement($teachingUnit)) {
+            // set the owning side to null (unless already changed)
+            if ($teachingUnit->getLevel() === $this) {
+                $teachingUnit->setLevel(null);
             }
         }
 
