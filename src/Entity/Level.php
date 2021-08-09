@@ -40,10 +40,16 @@ class Level
      */
     private $teachingUnits;
 
+    /**
+     * @ORM\OneToMany(targetEntity=StudentTemporary::class, mappedBy="level")
+     */
+    private $studentTemporaries;
+
     public function __construct()
     {
         $this->students = new ArrayCollection();
         $this->teachingUnits = new ArrayCollection();
+        $this->studentTemporaries = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -129,6 +135,36 @@ class Level
             // set the owning side to null (unless already changed)
             if ($teachingUnit->getLevel() === $this) {
                 $teachingUnit->setLevel(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|StudentTemporary[]
+     */
+    public function getStudentTemporaries(): Collection
+    {
+        return $this->studentTemporaries;
+    }
+
+    public function addStudentTemporary(StudentTemporary $studentTemporary): self
+    {
+        if (!$this->studentTemporaries->contains($studentTemporary)) {
+            $this->studentTemporaries[] = $studentTemporary;
+            $studentTemporary->setLevel($this);
+        }
+
+        return $this;
+    }
+
+    public function removeStudentTemporary(StudentTemporary $studentTemporary): self
+    {
+        if ($this->studentTemporaries->removeElement($studentTemporary)) {
+            // set the owning side to null (unless already changed)
+            if ($studentTemporary->getLevel() === $this) {
+                $studentTemporary->setLevel(null);
             }
         }
 

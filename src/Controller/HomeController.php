@@ -7,6 +7,7 @@ use App\Entity\Faculty;
 use App\Entity\Formation;
 use App\Entity\Level;
 use App\Entity\Student;
+use App\Entity\StudentTemporary;
 use App\Entity\User;
 use App\Form\FileFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -54,7 +55,7 @@ class HomeController extends AbstractController
         if($request->getMethod() == 'POST' && $_hidden == 'email_hidden')
         {
             $_email = $request->request->get('_email');
-            $_student = $this->getDoctrine()->getRepository(Student::class)->findOneBy(['email' => $_email]);
+            $_student = $this->getDoctrine()->getRepository(StudentTemporary::class)->findOneBy(['email' => $_email]);
 
             if($_student)
             {
@@ -68,20 +69,24 @@ class HomeController extends AbstractController
         }
 
         // Formulaire d'inscription à un niveau de formation
-        if($request->getMethod() == 'POST' && $_hidden == 'radio_hidden')
+        if($form->isSubmitted() && $form->isValid())
         {
-            $id_level = $request->request->get('level');
+            $id_level = $form->get('id_level')->getData();
             $_level = $this->getDoctrine()->getRepository(Level::class)->findOneBy(['id' => $id_level]);
             $__student = $session->get('_student');
-            $diplome = $_FILES['diplomes'];
+            $diplome = $form->get('diplomes')->getData();
+
             if($diplome)
             {
-                $form = $this->createForm(FileFormType::class);
-                $form->handleRequest($request);
-                dd($form);
-                //$newFileName = 'diplome_' . $__student->getFirstname() . '_' . $__student->getLastname() . '_' . $__student->getId() . '' . $diplome->guessExtension();
-                //dd($newFileName);
+                $newFileName = 'diplome_' . $__student->getFirstname() . '_' . $__student->getLastname() . '_' . $__student->getId() . '.' . $diplome->guessExtension();
+            
+                $diplome->move(
+                    $this->getParameter('last_diplomes'),
+                    $newFileName
+                );
             }
+
+            // Envoyer un mail à l'administration
         }
 
         return $this->render('home/register.html.twig', $_returneds);

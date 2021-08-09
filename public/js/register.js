@@ -1,19 +1,23 @@
 var isStudentYet = document.querySelector('.is-student-yet');
 var isStudentYetForm = document.querySelector('.is-student-yet-form');
-var validationInscription = document.querySelector('.validation-inscription');
 var emailForm = document.querySelector('.email-form');
 var diveFormFile = document.querySelector('.dive-form-file');
 var checkLevel = document.querySelector('#check-level');
 var formations = document.querySelector('.formations');
+var idLevel = document.querySelector('.id-level');
 var checkLevel = null;
 
 if (formations) {
-    for (var i = 0; i < diveFormFile.id; i++) {
-        checkLevel = document.querySelector('#check-level' + (i + 1));
-        checkLevel.addEventListener('click', function() {
-            console.log(checkLevel.value);
-        });
-    }
+    formations.addEventListener('click', function(){
+        for (var i = 1; i <= diveFormFile.id; i++) {
+            checkLevel = document.querySelector('#check-level' + i);
+            if(checkLevel.checked){
+                diveFormFile.style.display = 'block';
+                idLevel.value = checkLevel.value;
+                break
+            }
+        }
+    });
 }
 
 isStudentYet.addEventListener('click', function() {
@@ -23,8 +27,3 @@ isStudentYet.addEventListener('click', function() {
         isStudentYetForm.style.display = 'none';
     }
 });
-
-for (var i = 0; i < 3; i++) {
-    checkLevel = document.querySelector('#check-level');
-    console.log(checkLevel);
-}

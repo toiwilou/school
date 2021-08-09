@@ -1,5 +1,4 @@
 
-
 USE school;
 
 INSERT INTO faculty (name) VALUES ("Faculté des Sciences et Techniques");
