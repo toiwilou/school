@@ -1,20 +1,42 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Hello AdminController!{% endblock %}
-
+{% block title %}Administrations{% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/toiwilou/projects/school/src/Controller/AdminController.php'|file_link(0) }}">src/Controller/AdminController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/toiwilou/projects/school/templates/admin/index.html.twig'|file_link(0) }}">templates/admin/index.html.twig</a></code></li>
-    </ul>
+<div class="row">
+    {% include 'admin/sidebar.html.twig' %}
+    <div class="col-sm-9 dive-admin-right">
+        <div class="dive-admin-content">
+            <table>
+                <tr>
+                    <td><strong>Prénom</strong></td>
+                    <td><strong>Nom</strong></td>
+                    <td><strong>E-mail</strong></td>
+                    <td><strong>Téléphone</strong></td>
+                    <td><strong>Adresse</strong></td>
+                    <td><strong>Faculté de référence</strong></td>
+                    <td><strong>Actions</strong></td>
+                </tr>
+                {% for admin in admins %}
+                    <tr>
+                        <td>{{ admin.firstname }}</td>
+                        <td>{{ admin.lastname }}</td>
+                        <td>{{ admin.email }}</td>
+                        <td>{{ admin.phone }}</td>
+                        <td>{{ admin.address }}</td>
+                        <td>
+                            {% if admin.faculty %}
+                                {{ admin.faculty }}
+                            {% else %}
+                                Pas de faculté de référence
+                            {% endif %}
+                        </td>
+                        <td><a href="#"><button class="btn btn-danger" type="button">Supprimer</button></a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <a href="{{ path("add_admin") }}"><button type="button" class="btn btn-primary add-admin">Ajouter un administrateur</button></a>
+        </div>
+    </div>
 </div>
+
 {% endblock %}

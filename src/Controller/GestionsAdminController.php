@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Admin;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -13,8 +14,10 @@ class GestionsAdminController extends AbstractController
      */
     public function index(): Response
     {
+        $admins = $this->getDoctrine()->getRepository(Admin::class)->findAll();
+
         return $this->render('admin/index.html.twig', [
-            'controller_name' => 'AdminController',
+            'admins' => $admins,
         ]);
     }
 
