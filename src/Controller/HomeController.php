@@ -43,6 +43,7 @@ class HomeController extends AbstractController
         $_student = new StudentTemporary();
         $_form = $this->createForm(RegisterStudentTemporaryFormType::class, $_student);
         $_form->handleRequest($request);
+
         $_returneds = [
             'faculties' => $this->getDoctrine()->getRepository(Faculty::class)->findAll(),
             'departments' => $this->getDoctrine()->getRepository(Department::class)->findAll(),
@@ -55,6 +56,8 @@ class HomeController extends AbstractController
             'isStudentYet' => 'is-student-yet',
             '_checked' => null,
             '_disabled' => null,
+            'min' => '01-01-' . (date('Y') - 10),
+            'max' => '01-01-' . (date('Y')- 45),
         ];
 
         // Formulaire de vérification de l'email
@@ -94,6 +97,13 @@ class HomeController extends AbstractController
             }
 
             // Envoyer un mail à l'administration
+        }
+
+        if($_form->isSubmitted() && $_form->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($_student);
+            $em->flush();
         }
 
         return $this->render('home/register.html.twig', $_returneds);

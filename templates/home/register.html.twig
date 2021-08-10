@@ -86,8 +86,8 @@
 {% endif %}
 
 <div class="form-check form-switch">
-  <input class="form-check-input is-not-student" type="checkbox" id="flexSwitchCheckDefault" {{ _disabled }}>
-  <label class="form-check-label" for="flexSwitchCheckDefault">Je m'inscris pour la première fois</label>
+  <input class="form-check-input is-not-student" type="checkbox" id="flexSwitchCheckDefault_" {{ _disabled }}>
+  <label class="form-check-label" for="flexSwitchCheckDefault_">Je m'inscris pour la première fois</label>
 </div>
 
 <div id="{{ levels|length }}" class="dive-new-student" style="display: none;">
@@ -121,6 +121,11 @@
             {% endfor %}
         </div>
     {% endfor %}
+    <div class="dive-date" style="display: none;">
+        <input type="date" class="input-birthday">
+        <button class="btn btn-info validate-date">Valider</button>
+    </div>
+
     <div class="dive-form-inscription" style="display: none;">
         {{ form(_form) }}
         <a href="{{ path("register") }}"><button class="btn btn-danger">Annuler</button></a>

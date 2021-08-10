@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -31,21 +32,14 @@ class RegisterStudentTemporaryFormType extends AbstractType
                 'multiple'=>false,'expanded'=>true,
             ])
             ->add('firstname', TextType::class)
-            ->add('level', HiddenType::class, [
-                'label' => false,
-                'attr' => [
-                    'class' => 'hidden-level',
-                ],
+            ->add('level', EntityType::class, [
+                'class' => 'App\Entity\Level',
             ])
             ->add('lastname', TextType::class)
             ->add('email', EmailType::class)
             ->add('phone', IntegerType::class)
             ->add('address', TextType::class)
-            ->add('birthday', DateType::class, [
-                'attr' => [
-                    'class' => 'js-datepicker',
-                ],
-            ])
+            ->add('birthday', DateType::class)
             ->add('password', PasswordType::class)
             ->add('Inscription', SubmitType::class)
         ;

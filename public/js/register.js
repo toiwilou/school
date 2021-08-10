@@ -9,6 +9,11 @@ var formations = document.querySelector('.formations');
 var idLevel = document.querySelector('.id-level');
 var diveNewStudent = document.querySelector('.dive-new-student');
 var hiddenLevel = document.querySelector('.hidden-level');
+var birthday = document.querySelector('#register_student_temporary_form_birthday');
+var newForm = document.querySelector('#register_student_temporary_form');
+var diveDate = document.querySelector('.dive-date');
+var validateDate = document.querySelector('.validate-date');
+var inputBirthday = document.querySelector('.input-birthday');
 var checkLevel = null;
 
 if (formations) {
@@ -29,13 +34,19 @@ if (diveNewStudent) {
         for (var i = 1; i <= diveNewStudent.id; i++) {
             checkLevel = document.querySelector('#check-level_' + i);
             if (checkLevel.checked) {
-                diveFormInscription.style.display = 'block';
+                diveDate.style.display = 'block';
                 hiddenLevel.value = checkLevel.value;
                 break
             }
         }
     });
 }
+
+validateDate.addEventListener('click', function(){
+    birthday.value = inputBirthday.value;
+    inputBirthday.setAttribute('disabled', '');
+    diveFormInscription.style.display = 'block';
+});
 
 isStudentYet.addEventListener('click', function() {
     if (isStudentYet.checked) {
@@ -52,5 +63,7 @@ isNotStudent.addEventListener('click', function() {
         isStudentYet.checked = false;
         isStudentYetForm.style.display = 'none';
         diveNewStudent.style.display = 'block';
+    } else {
+        diveNewStudent.style.display = 'none';
     }
 });
