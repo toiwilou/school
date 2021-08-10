@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+{% block title %}Inscriptions{% endblock %}
+{% block body %}
+
+<div class="dive-admin-content">
+    <table>
+        <tr>
+            <td><strong>Prénom</strong></td>
+            <td><strong>Nom</strong></td>
+            <td><strong>E-mail</strong></td>
+            <td><strong>Téléphone</strong></td>
+            <td><strong>Adresse</strong></td>
+            <td><strong>Date de naissance</strong></td>
+            <td><strong>Genre</strong></td>
+            <td><strong>Nieau</strong></td>
+            <td><strong>Formation</strong></td>
+            <td colspan="3"><strong>Actions</strong></td>
+        </tr>
+        {% for student in students %}
+            <tr>
+                <td>{{ student.firstname }}</td>
+                <td>{{ student.lastname }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.phone }}</td>
+                <td>{{ student.address }}</td>
+                <td>{{ student.birthday|date("Y/m/d") }}</td>
+                <td>{{ student.gender }}</td>
+                <td>{{ student.level.name }}</td>
+                <td>{{ student.level.formation.name }}</td>
+                <td><a href="#"><button class="btn btn-success" type="button">Accepter</button></a></td>
+                <td><a href="#"><button class="btn btn-danger" type="button">Réfuser</button></a></td>
+                <td>
+                    <button class="btn btn-outline-primary" data-bs-toggle="modal" 
+                        data-bs-target="#diplomeModal" type="button">Diplômes</button>
+                    <div class="modal fade" id="diplomeModal" tabindex="-1" aria-labelledby="diplomeModalLabel"  
+                        aria-hidden="true">
+                        <div class="modal fade show" id="exampleModalXl" tabindex="-1" aria-labelledby="exampleModalXlLabel" style="display: block;" aria-modal="true" role="dialog">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="diplomeModalLabel">Diplôme {{ student.firstname }} {{ student.lastname }}</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <iframe src="{{ asset("files/students/inscriptions/last_diplomes/diplome_" ~ student.firstname ~ "_" ~ student.lastname ~ "_" ~ student.id ~ ".pdf") }}" width="100%" height="500px"></iframe>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {#<div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="diplomeModalLabel">Diplôme {{ student.firstname }} {{ student.lastname }}</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe src="{{ asset("files/students/inscriptions/last_diplomes/diplome_Hassane_Toiwilou_1.pdf") }}" width="100%" height="500px"></iframe>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>#}
+                    </div>
+                    
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalXl">Extra large modal</button>
+{#
+<div class="modal fade show" id="exampleModalXl" tabindex="-1" aria-labelledby="exampleModalXlLabel" style="display: block;" aria-modal="true" role="dialog">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title h4" id="exampleModalXlLabel">Extra large modal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+    </div>
+  </div>
+</div>#}
+
+{% endblock %}

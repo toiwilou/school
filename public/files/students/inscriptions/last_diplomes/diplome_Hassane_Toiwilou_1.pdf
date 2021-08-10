@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apprendre le Javascript lire et télécharger en PDF</title>
+<meta name="robots" content="index, follow"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="canonical" href="https://pdfbib.com/14-cours-formation-javascript.pdf"/>
+<meta name="description" content="Télécharger et apprendre cours Apprendre le Javascript en PDF."/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Apprendre le Javascript"/>
+<meta property="og:description" content="Télécharger et lire Apprendre le Javascript cours en PDF."/>
+<meta property="og:url" content="https://pdfbib.com/14-cours-formation-javascript.pdf"/>
+<meta property="og:site_name" content="PDFbib.com"/>
+<meta property="og:image" content="https://pdfbib.com/pdf/covers/0014-formation-javascript.pdf.png"/>
+<style>html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a{background-color:transparent}h1{margin:.67em 0;font-size:2em}img{border:0}input{margin:0;font:inherit;color:inherit}input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}.thumbnail a>img{display:block;max-width:100%;height:auto}h1{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1{margin-top:20px;margin-bottom:10px}h1{font-size:36px}p{margin:0 0 10px}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.row{margin-right:-15px;margin-left:-15px}.col-lg-4,.col-md-6,.col-sm-12,.col-sm-3,.col-sm-9{position:relative;min-height:1px;padding-right:15px;padding-left:15px}@media (min-width:768px){.col-sm-12,.col-sm-3,.col-sm-9{float:left}.col-sm-12{width:100%}.col-sm-9{width:75%}.col-sm-3{width:25%}}@media (min-width:992px){.col-md-6{float:left}.col-md-6{width:50%}}@media (min-width:1200px){.col-lg-4{float:left}.col-lg-4{width:33.33333333%}}.form-control{display:block;width:100%;height:34px;padding:6px 12px;font-size:14px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.form-control::-moz-placeholder{color:#999;opacity:1}.form-control:-ms-input-placeholder{color:#999}.form-control::-webkit-input-placeholder{color:#999}.form-control::-ms-expand{background-color:transparent;border:0}.form-group{margin-bottom:15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}@media (min-width:768px){.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default .navbar-brand{color:#777}.thumbnail{display:block;padding:4px;margin-bottom:20px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px}.thumbnail a>img{margin-right:auto;margin-left:auto}.thumbnail .caption{padding:9px;color:#333}.container:after,.container:before,.navbar:after,.navbar:before,.row:after,.row:before{display:table;content:" "}.container:after,.navbar:after,.row:after{clear:both}@-ms-viewport{width:device-width}body{padding-top:60px}h1{font-size:1.6em;margin-top:10px;margin-bottom:0;vertical-align:middle}.alert{padding:15px;margin-bottom:20px;border:1px solid transparent;border-radius:4px}.alert-danger{color:#a94442;background-color:#f2dede;border-color:#ebccd1}.pagination{display:inline-block;padding-left:0;margin:20px 0;border-radius:4px}.pagination>li{display:inline}.pagination>li>a,.pagination>li>span{position:relative;float:left;padding:6px 12px;margin-left:-1px;line-height:1.42857143;color:#337ab7;text-decoration:none;background-color:#fff;border:1px solid #ddd}.pagination>li:first-child>a,.pagination>li:first-child>span{margin-left:0;border-top-left-radius:4px;border-bottom-left-radius:4px}.pagination>li:last-child>a,.pagination>li:last-child>span{border-top-right-radius:4px;border-bottom-right-radius:4px}.pagination>li>a:hover,.pagination>li>span:hover,.pagination>li>a:focus,.pagination>li>span:focus{z-index:2;color:#23527c;background-color:#eee;border-color:#ddd}.pagination>.active>a,.pagination>.active>span,.pagination>.active>a:hover,.pagination>.active>span:hover,.pagination>.active>a:focus,.pagination>.active>span:focus{z-index:3;color:#fff;cursor:default;background-color:#337ab7;border-color:#337ab7}.pagination>.disabled>span,.pagination>.disabled>span:hover,.pagination>.disabled>span:focus,.pagination>.disabled>a,.pagination>.disabled>a:hover,.pagination>.disabled>a:focus{color:#777;cursor:not-allowed;background-color:#fff;border-color:#ddd}.cover{border:1px solid #ccc;padding:5px}.nav{margin-top:8px;padding:3px 0 3px 10px;border:1px solid #ccc;border-radius:6px}</style>
+</head>
+<body><noscript><meta HTTP-EQUIV="refresh" content="0;url='https://pdfbib.com/14-cours-formation-javascript.pdf?PageSpeed=noscript'" /><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a href="https://pdfbib.com/14-cours-formation-javascript.pdf?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript>
+<div class="container">
+<div class="navbar navbar-default navbar-fixed-top">
+<div class="container">
+<a class="navbar-brand" href="https://pdfbib.com" title="Bienvenue sur PDFbib.com">PDFbib.com</a>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<h1>Apprendre le Javascript cours pdf</h1>
+</div>
+<div class="col-sm-12" style="margin:10px 0 10px 0;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-full-width-responsive="true" data-ad-client="ca-pub-3751423958117571" data-ad-slot="2726760331" data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> </div>
+<div class="col-sm-9">
+<div class="row">
+<div class="col-sm-12" style="margin-top:10px;">
+<p>
+Téléchargez ou consultez le cours en ligne <strong>Apprendre le Javascript</strong>, tutoriel PDF gratuit en 59 pages.
+</p>
+<p>
+Ce cours est de niveau Avancé et taille 306.19 Ko. Ce fichier est accessible gratuitement. Il est destiné à un usage strictement personnel.
+</p>
+</div>
+<div class="col-sm-12" style="text-align:center;">
+<object data="/exemple/exemple-0014-formation-javascript.pdf#toolbar=0&view=FitH" type="application/pdf" style="width:100%;background:transparent url(loading.gif.pagespeed.ce.ULJYQDUev6.gif) no-repeat center" height="550">
+</object>
+<p style="text-align:center;border:1px solid #CCC;margin-top:10px;padding:10px;">
+<strong>Ceci est un aperçu du document PDF, cliquez sur le lien de téléchargement pour obtenir le cours complet.</strong>
+</p>
+</div>
+<div class="col-sm-12" style="border:1px solid #CCC;margin-top:10px;padding:10px;">
+<p>
+Cours et tutoriels pour apprendre <strong>Apprendre le Javascript</strong>.
+</p>
+<p>
+Aimerais-tu apprendre <i>Apprendre le Javascript</i>? Cette page qui contient des liens vers des cours et des tutoriels est pour vous.!
+</p>
+<p>
+Nous avons essayé de rassembler un ensemble de documents ou des livres électroniques susceptibles de vous aider à maîtriser la <strong>Apprendre le Javascript</strong>. Nous espérons que vous trouverez toutes les réponses à vos questions.
+<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-3751423958117571" data-ad-slot="6233514593"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+</p>
+<p>
+Ces tutoriels et livres électroniques sont disponibles gratuitement et téléchargeables au format pdf.
+</p>
+<p>
+Certains <strong>cours</strong> sont réservés aux <strong>débutants</strong>, mais quel que soit votre niveau, vous devriez apprendre quelque chose.
+</p>
+<p>
+PDFbib.com propose aussi des cours sur <strong>Evénements et données, Gestion de formulaires HTML, Interaction avec les feuilles de style en cascade, Manipulation du DOM XML, Ajax, JQuery</strong> et beaucoup d'autres cours en informatique. Vous devriez venir voir notre documents de <strong>JavaScript</strong>. Vous trouverez votre bonheur sans problème!.
+</p>
+</div>
+<div class="col-sm-12">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-3751423958117571" data-ad-slot="2583642683"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+<div class="col-sm-12" style="text-align:center;">
+<h1 style="border:#337ab7 solid 1px;padding:8px;"><a target="_blank" href="https://pdfbib.com/pdf/0014-formation-javascript.pdf" style="text-decoration: none;">Télécharger cours Apprendre le Javascript en PDF</a></h1>
+</div>
+<div class="col-sm-12" style="text-align: center;font-size: 1.4em;padding:20px;">Cours et Exercices similaire</div>
+<div class="col-lg-4 col-md-6 col-sm-12" style="height:300px;">
+<div class="thumbnail">
+<a href="https://pdfbib.com/617-cours-apprendre-le-c.pdf">
+<script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','https://pdfbib.com/14-cours-formation-javascript.pdf','tMVAgUnkc6',true,false,'iavSkVKDG1g');</script><img src="pdf/covers/x0617-apprendre-le-c.pdf.png.pagespeed.ic.vfsAh2ueTl.jpg" alt="Apprendre le C++" class="cover" data-pagespeed-url-hash="3554903781" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<div class="caption">
+<p style="overflow:hidden;"><strong>Cours Apprendre le C++ par Martin Hammerchmidt en 71p.</strong></p>
+</div>
+</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12" style="height:300px;">
+<div class="thumbnail">
+<a href="https://pdfbib.com/642-cours-apprendre-jquery.pdf">
+<img src="pdf/covers/x0642-apprendre-jquery.pdf.png.pagespeed.ic.M4pyqdDz9_.png" alt="Apprendre jQuery" class="cover" data-pagespeed-url-hash="2906723360" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<div class="caption">
+<p style="overflow:hidden;"><strong>Cours Apprendre jQuery par Sutterlity Laurent en 97p.</strong></p>
+</div>
+</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12" style="height:300px;">
+<div class="thumbnail">
+<a href="https://pdfbib.com/303-cours-apprendre-langage-programmation-ruby.pdf">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAACvCAAAAAAa3+XjAAAEfUlEQVR42u3b70+TVxQHcLa924sl+y+GmRqMdrAFYT8kZmHoC+YQMjbMiM4os3RZkV+rUH7ID4swxAWBTUARBKUjilMowy6jA0E2NXYGITjBZE50ihTvPee7F1SjAxQzi8s8N2n69CZ9Ps+5Pee8uM9TPzzF4Se44IILLrjgggsuuOCC+wLnGab4viMGM/sIZ4CJQMREmkBEBIA00d1rYB9Gfvk2gEnvBwIA/DmKqTm+PsYejI9e9wlOaC+221z2E66WMte5jt7Crt4zHbfz81yO/oFDw5kj2bE7trWakh1MPsA1Svvbctak1378UVpy0haTJXXhhiJV0pn5ZkxiWWHsYEpdXn52oMXpE5wxUur4/dhZd8tRZ3N7yrHz5/Y7B7G/YqCy0+Xu3nOjD329w19Xn5rrD/8vSu3mTEvjy1JjTUzEWpNmEJMmhtasiZg0CESsNc9Dk+Fnq8MJLrjgggsuuOCCCy644IILLrjggv//cUVQSrNSpJVirRQraFKK2Pua2v/USrFSBK0IpDS0UgzFUEyKFBRppUgpeix8TptN/MARPbnIrR3YtWXvgPlz9wFj4WTl1hT3HtQ7k0yDQ2bTeXdqUjP0MQCVxvKhJKMT9Yk/oTOhDtXGgonxtEFO/+1UXqcVO458szXTlWTqneHSZsMJ/S9Gwj93aeQ7KUHBOYbysCjzOb+GuM1vZITvCsl8u+KVz+y4aDzMWJIZGLm8MKBxcfYyuyH/vavLrYFVjhey2C8r4SWLX/fzG4JjM4pf3/7qDEs5G65gTAq7GBYRaVsUYf0g9LWhiNjtl4Kjw1KzEL5tkaGy0ZDQD1dBwC2sCF9dsjCw2FwMY1CuZ/OFmJBlV6IyVw4HxUatzghd/1bqqrjSlgVBuXOPnPmGvyk4dUX7ZG34ZSw/ENwRbCpyrjzxXMaS1FVF6740lS8tOArLmsV/wHB0onm17cPWBckBrQbjy93h1e/a/L/wz4l8f+3a+E9C4teHmndvX5cdc0fPGcdoPUYa7eM40wZqoL6DzemWC01o6sm2jLo7UdaVldKCX2pr/8LBG3B/j+IxR9pp9GU40DB5IcuJ003tvX0n2n7u6umoT8tz/oid16av+0MSTnuTmKcnN/8z5cmbKA9895G1MyvOGqw1gzSgQVorxRqalGKmqXoHaQ1oBmsovlfnTIpAmog0ERFppYigpL0KLrjgggsuuOCCCy644IILLrjgggsuuOAPHfyI+am9Ut89Yq4BIoCIGMQAkSYA5H33YeRXveenu3FO7e+qsalp7VG46cHENc+Tf9ZZozz/5N6cvAa7teRw3fFfE3df8aw/fMjm6NyYU1XbWNpzJNEa89UPO6Nrvp3wAd5m2xdn3rKposycVVB15FPj8PHogsT4yrrWsoT8febv7GklG3fU1GxqrDg7t9tDj5lwDADq3pknpyWhZsBzZ3xeSs37PwbGA/kuTUZwwQUXXHDBBRdccMEFF1xwwQUX/D+F8zMaOePSxFPDCSdH7lv5+V72W3ck26XJCC74fI2/AYjze+Dyt55EAAAAAElFTkSuQmCC" alt="Apprendre a programmer avec Ruby" class="cover" data-pagespeed-url-hash="1049154283" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<div class="caption">
+<p style="overflow:hidden;"><strong>Cours Apprendre a programmer avec Ruby en 79p.</strong></p>
+</div>
+</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12" style="height:300px;">
+<div class="thumbnail">
+<a href="https://pdfbib.com/167-cours-formation-python.pdf">
+<img src="pdf/covers/x0167-formation-python.pdf.png.pagespeed.ic.LRN6Zmn-g3.jpg" alt="Apprendre à programmer avec Python" class="cover" data-pagespeed-url-hash="3814048232" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<div class="caption">
+<p style="overflow:hidden;"><strong>Cours Apprendre à programmer avec Python par Gérard Swinnen en 292p.</strong></p>
+</div>
+</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12" style="height:300px;">
+<div class="thumbnail">
+<a href="https://pdfbib.com/482-cours-javascript-et-jquery.pdf">
+<img src="pdf/covers/x0482-javascript-et-jquery.pdf.png.pagespeed.ic.-5xK-FtZtB.png" alt="JavaScript et jQuery" class="cover" data-pagespeed-url-hash="2729087800" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<div class="caption">
+<p style="overflow:hidden;"><strong>Cours JavaScript et jQuery par Nicolas Bauwens en 66p.</strong></p>
+</div>
+</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12" style="height:300px;">
+<div class="thumbnail">
+<a href="https://pdfbib.com/481-cours-pdf-introduction-au-javascript.pdf">
+<img src="pdf/covers/x0481-pdf-introduction-au-javascript.pdf.png.pagespeed.ic.iwYEa67oAY.png" alt="Introduction au Javascript" class="cover" data-pagespeed-url-hash="4029294447" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<div class="caption">
+<p style="overflow:hidden;"><strong>Cours Introduction au Javascript par Noël Macé en 55p.</strong></p>
+</div>
+</a>
+</div>
+</div>
+<div class="col-sm-12">
+</div>
+<div class="col-sm-12">
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="col-sm-12" style="margin-bottom:10px;">
+<form method="post" action="https://pdfbib.com">
+<div class="form-group">
+<input type="text" name="query" class="form-control" placeholder="Chercher un cours">
+</div>
+<input type="hidden" name="_token" value="K2qrtZ5GGnLgtEJM2pEoZMYJ3Ze2UUKg1efGMi3T">
+</form>
+</div>
+<div class="col-sm-12">
+<ul style="list-style: none;margin:0;padding:0;">
+<li class="nav"><a title="Cours et exercices Microsoft Excel" href="https://pdfbib.com/cours-et-exercices-excel"><strong>Microsoft Excel</strong></a></li>
+<li class="nav"><a title="Cours et exercices Microsoft Word" href="https://pdfbib.com/cours-et-exercices-word"><strong>Microsoft Word</strong></a></li>
+<li class="nav"><a title="Cours et exercices Microsoft PowerPoint" href="https://pdfbib.com/cours-et-exercices-powerpoint"><strong>Microsoft PowerPoint</strong></a></li>
+<li class="nav"><a title="Cours et exercices Microsoft Outlook" href="https://pdfbib.com/cours-et-exercices-Outlook"><strong>Microsoft Outlook</strong></a></li>
+<li class="nav"><a title="Cours et exercices Microsoft Access" href="https://pdfbib.com/cours-et-exercices-access"><strong>Microsoft Access</strong></a></li>
+<li class="nav"><a title="Cours et exercices C/C++ and C#" href="https://pdfbib.com/cours-et-exercices-c"><strong>C/C++ and C#</strong></a></li>
+<li class="nav"><a title="Cours et exercices Langage Java" href="https://pdfbib.com/cours-et-exercices-java"><strong>Langage Java</strong></a></li>
+<li class="nav"><a title="Cours et exercices Langage Python" href="https://pdfbib.com/cours-et-exercices-python"><strong>Langage Python</strong></a></li>
+<li class="nav"><a title="Cours et exercices Programmation Dot Net" href="https://pdfbib.com/cours-et-exercices-net"><strong>Programmation Dot Net</strong></a></li>
+<li class="nav"><a title="Cours et exercices Algorithmique" href="https://pdfbib.com/cours-et-exercices-algorithmique"><strong>Algorithmique</strong></a></li>
+<li class="nav"><a title="Cours et exercices HTML/CSS" href="https://pdfbib.com/cours-et-exercices-html-css"><strong>HTML/CSS</strong></a></li>
+<li class="nav"><a title="Cours et exercices JavaScript" href="https://pdfbib.com/cours-et-exercices-javascript"><strong>JavaScript</strong></a></li>
+<li class="nav"><a title="Cours et exercices PHP language" href="https://pdfbib.com/cours-et-exercices-php"><strong>PHP language</strong></a></li>
+<li class="nav"><a title="Cours et exercices Base de donnée MySQL" href="https://pdfbib.com/cours-et-exercices-mysql"><strong>Base de donnée MySQL</strong></a></li>
+<li class="nav"><a title="Cours et exercices Le langage SQL" href="https://pdfbib.com/cours-et-exercices-sql"><strong>Le langage SQL</strong></a></li>
+<li class="nav"><a title="Cours et exercices Oracle" href="https://pdfbib.com/cours-et-exercices-oracle"><strong>Oracle</strong></a></li>
+<li class="nav"><a title="Cours et exercices Methode d'analyse UML" href="https://pdfbib.com/cours-et-exercices-uml"><strong>Methode d'analyse UML</strong></a></li>
+<li class="nav"><a title="Cours et exercices Microsoft Windows" href="https://pdfbib.com/cours-et-exercices-windows"><strong>Microsoft Windows</strong></a></li>
+<li class="nav"><a title="Cours et exercices Unix/Linux" href="https://pdfbib.com/cours-et-exercices-unix-linux"><strong>Unix/Linux</strong></a></li>
+<li class="nav"><a title="Cours et exercices Mac OS" href="https://pdfbib.com/cours-et-exercices-mac"><strong>Mac OS</strong></a></li>
+<li class="nav"><a title="Cours et exercices Réseaux Informatique" href="https://pdfbib.com/cours-et-exercices-reseau-reseaux"><strong>Réseaux Informatique</strong></a></li>
+<li class="nav"><a title="Cours et exercices CISCO CCNA" href="https://pdfbib.com/cours-et-exercices-cisco-ccna"><strong>CISCO CCNA</strong></a></li>
+<li class="nav"><a title="Cours et exercices Adobe Photoshop" href="https://pdfbib.com/cours-et-exercices-photoshop"><strong>Adobe Photoshop</strong></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-sm-12" style="margin-bottom:10px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-full-width-responsive="true" data-ad-client="ca-pub-3751423958117571" data-ad-slot="2726760331" data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> </div>
+<div class="col-sm-12">
+<hr/>
+<p>
+All right reserved 2021 copyright © <a href="https://pdfbib.com" title="site PDFbib.com">PDFbib.com </a> v1 - Cours, exercices corrigés, tutoriels et travaux pratiques en informatique.
+</p>
+<p>
+Site alternative pour télécharger des cours informatique en PDFs <a href="https://www.bestcours.com">BestCours.com</a> | <a href="https://www.courspdf.net">CoursPDF.net</a>
+</p>
+<p>
+</p>
+</div>
+</div>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127292019-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-127292019-1');</script>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bc311eb13255403"></script>
+</body>
+</html>
