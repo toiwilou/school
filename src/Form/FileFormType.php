@@ -46,7 +46,7 @@ class FileFormType extends AbstractType
                     ])
                 ],
             ])
-            ->add('Inscription', SubmitType::class, [
+            ->add('Envoyer', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-primary',
                 ]

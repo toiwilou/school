@@ -1,0 +1,16 @@
+.dive-admin-right {
+    margin-left: 25%;
+}
+
+.dive-admin-content table {
+    width: 100%;
+}
+
+.dive-admin-content td {
+    padding: 3px 8px;
+    border: 1px solid #333;
+}
+
+.add-admin {
+    margin: 20px 0;
+}
