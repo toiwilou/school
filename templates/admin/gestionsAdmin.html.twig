@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{% block title %}Administrations{% endblock %}
+{% block body %}
+
+<div class="row">
+    {% include 'admin/sidebar.html.twig' %}
+    <div class="col-sm-9 dive-admin-right">
+        <div class="dive-admin-content">
+            <table>
+                <tr>
+                    <td><strong>Prénom</strong></td>
+                    <td><strong>Nom</strong></td>
+                    <td><strong>E-mail</strong></td>
+                    <td><strong>Téléphone</strong></td>
+                    <td><strong>Adresse</strong></td>
+                    <td><strong>Faculté de référence</strong></td>
+                    <td><strong>Actions</strong></td>
+                </tr>
+                {% for admin in admins %}
+                    <tr>
+                        <td>{{ admin.firstname }}</td>
+                        <td>{{ admin.lastname }}</td>
+                        <td>{{ admin.email }}</td>
+                        <td>{{ admin.phone }}</td>
+                        <td>{{ admin.address }}</td>
+                        <td>
+                            {% if admin.faculty %}
+                                {{ admin.faculty }}
+                            {% else %}
+                                Pas de faculté de référence
+                            {% endif %}
+                        </td>
+                        <td><a href="#"><button class="btn btn-danger" type="button">Supprimer</button></a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <a href="{{ path("add_admin") }}"><button type="button" class="btn btn-primary add-admin">Ajouter un administrateur</button></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
