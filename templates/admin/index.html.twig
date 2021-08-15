@@ -1,0 +1,411 @@
+{% extends 'base.html.twig' %}
+{% block title %}Tous les étudiants{% endblock %}
+{% block body %}
+
+<style>
+    .row {
+        margin: 0;
+    }
+
+    ._none {
+        display: none;
+    }
+
+    ._block {
+        display: block;
+    }
+
+    .header {
+        height: 100px;
+        background-color: #dfe8e8;
+        position: fixed;
+        width: 100%;
+    }
+
+    .bars {
+        width: 110px;
+        height: 100px;
+    }
+
+    .bars:hover {
+        cursor: pointer;
+        background-color: rgba(188, 209, 209, 0.2);
+    }
+
+    .bars i {
+        font-size: 40px;
+        margin-top: 30px;
+    }
+
+    .margin-dive-content {
+        transition: 0.4s;
+        margin-left: 18%;
+    }
+
+    .sidebar { 
+        height: 100%; 
+        position: fixed;
+        background-color: #055e4d;
+        margin: 0;
+    }
+
+    .inside {
+        transition: 0.4s;
+        width: 18%;
+    }
+
+    .outside {
+        width: 0;
+        padding: 0;
+        transition: 0.4s;
+    }
+
+    .logo img {
+        height: 100px;
+    }
+
+    .profile {
+        padding: 15px;
+    }
+
+    .camera {
+        position: absolute;
+        margin-left: 50px;
+        margin-top: 48px;
+    }
+
+    .dive-drop-down {
+        width: auto;
+        position: fixed;
+        background-color: #f2f2f2;
+        right: 12%;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .dive-drop-down ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .dive-drop-down li {
+        list-style-type: none;
+        font-size: 20px;
+    }
+
+    .dive-drop-down a {
+        text-decoration: none;
+    }
+
+    .btn-licence {
+        background-color: #0a6b58;
+        height: 50px;
+        padding: 0 20px;
+        font-size: 20px;
+        float: right;
+        color: white;
+    }
+
+    .btn-licence:hover {
+        color: white;
+        background-color: #108f77;
+    }
+</style>
+
+<div class="header row">
+    <div style="padding: 0;" class="menu col-sm-4">
+        <div class="bars text-center">
+            <i style="color: #0f5c26;" class="fas fa-bars"></i>
+        </div>
+    </div>
+    <div class="dive-logo col-sm-3 text-center">
+        <div class="logo"><a href="{{ path("home") }}"><img src="{{ asset("/images/logo.png") }}"></a></div>
+    </div>
+    <div class="row profile col-sm-5">
+        <div style="padding: 22px 0 0 30px;" class="col-sm-9">
+            <h4 style="text-align: right; color: #0f5c26;"><span class="name-profile" style="cursor: pointer;">Hassane TOIWILOU<i style="margin: 0 15px;" class="fal fa-angle-down"></i></span></h4>
+        </div>
+        <div class="col-sm-3">
+            <div style="width: 70px; height: 70px;">
+                <i data-bs-toggle="modal" data-bs-target="#cameraModal" style="font-size: 18px;  color: rgba(7, 64, 24, 0.7); cursor: pointer;" class="fas fa-camera camera"></i>
+                <div style="width: 70px; height: 70px; border: 1px solid #bcd1d1; border-radius: 50%; background-image: url('{{ asset("images/profile/moi.jpg") }}'); background-repeat: no-repeat; background-size: cover;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height: 100px;"></div>
+<div class="dive-content">
+    <div class="sidebar outside">
+        
+    </div>
+    <div class="dive-content-right">
+        <div class="dive-drop-down _none">
+            <ul>
+                <li data-bs-toggle="modal" data-bs-target="#profileModal"><button class="dropdown-item" type="button">Modifier mon profil</button></li>
+                <a href="{{ path("app_logout") }}"><li><button class="dropdown-item" type="button">Gérer les utilisateurs</button></li></a>
+                <a href="{{ path("app_logout") }}"><li><button class="dropdown-item" type="button">Déconnexion</button></li></a>
+            </ul>
+        </div>
+        <div style="padding: 20px;">
+            <i style="font-size: 30px; color: #055e4d;" class="fas fa-arrow-alt-circle-right"></i>
+            <span style="font-size: 35px; margin-left: 20px; color: #035747;">Titre de la page en cours</span>
+            <div style="padding-top: 40px" class="row">
+                <div style="padding-left: 0;" class="col-sm-9">
+                    <form method="POST">
+                        <div class="row">
+                            <div style="padding: 0;" class="col-sm-5">
+                                <input type="search" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <button type="button" class="btn btn-outline-success">Rechercher</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div style="padding-right: 0;" class="col-sm-3">
+                    <button class="btn btn-licence">Ajouter une licence</button>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #dfe8e8;">
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    </tr>
+                    <tr style="background-color: #ebf0ed;">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr style="background-color: #dfe8e8;">
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                    <tr style="background-color: #ebf0ed;">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr style="background-color: #dfe8e8;">
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                    <tr style="background-color: #ebf0ed;">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr style="background-color: #dfe8e8;">
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                    <tr style="background-color: #ebf0ed;">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr style="background-color: #dfe8e8;">
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                    <tr style="background-color: #ebf0ed;">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr style="background-color: #dfe8e8;">
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                    <tr style="background-color: #ebf0ed;">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr style="background-color: #dfe8e8;">
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                    <tr style="background-color: #ebf0ed;">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr style="background-color: #dfe8e8;">
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                    <tr style="background-color: #ebf0ed;">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr style="background-color: #dfe8e8;">
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                    <tr style="background-color: #ebf0ed;">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr style="background-color: #dfe8e8;">
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                    <tr style="background-color: #ebf0ed;">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr style="background-color: #dfe8e8;">
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                    <tr style="background-color: #ebf0ed;">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr style="background-color: #dfe8e8;">
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                    <tr style="background-color: #ebf0ed;">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr style="background-color: #dfe8e8;">
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                    <tr style="background-color: #ebf0ed;">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr style="background-color: #dfe8e8;">
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div style="background-color: #dfe8e8;"  class="modal-header">
+                <h5 class="modal-title" id="profileModalLabel">Modification du profil</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="cameraModal" tabindex="-1" aria-labelledby="cameraModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div style="background-color: #dfe8e8;" class="modal-header">
+                <h5 class="modal-title" id="cameraModalLabel">Téléchargement de photo de profil</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var diveDropDown = document.querySelector('.dive-drop-down');
+    var nameProfile = document.querySelector('.name-profile');
+    var bars = document.querySelector('.bars');
+    var sidebar = document.querySelector('.sidebar');
+    var diveContentRight = document.querySelector('.dive-content-right');
+
+    window.addEventListener('click', function(e){   
+        if (nameProfile.contains(e.target)){
+            if(diveDropDown.classList.contains('_none')){
+                diveDropDown.classList.remove('_none');
+                diveDropDown.classList.add('_block');
+            } else {
+                diveDropDown.classList.remove('_block');
+                diveDropDown.classList.add('_none');
+            }
+        } else{
+            diveDropDown.classList.remove('_block');
+            diveDropDown.classList.add('_none');
+        }
+
+        if (bars.contains(e.target)){
+            if(sidebar.classList.contains('outside')){
+                sidebar.classList.remove('outside');
+                sidebar.classList.add('inside');
+                diveContentRight.style.marginLeft = '18%';
+                diveContentRight.style.transition = '0.4s';
+            } else {
+                sidebar.classList.remove('inside');
+                sidebar.classList.add('outside');
+                diveContentRight.style.marginLeft = '0';
+                diveContentRight.style.transition = '0.4s';
+            }
+        } else if (!sidebar.contains(e.target)) {
+            sidebar.classList.remove('inside');
+            sidebar.classList.add('outside');
+            diveContentRight.style.marginLeft = '0';
+            diveContentRight.style.transition = '0.4s';
+        }
+    });
+</script>
+
+{% endblock %}

@@ -13,6 +13,22 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class StudentController extends AbstractController
 {
     /**
+     * @Route("/admin/students", name="admin_students")
+     */
+    public function index(): Response
+    {
+        $_returneds = [
+            'faculties' => $this->getDoctrine()->getRepository(Faculty::class)->findAll(),
+            'departments' => $this->getDoctrine()->getRepository(Department::class)->findAll(),
+            'formations' => $this->getDoctrine()->getRepository(Formation::class)->findAll(),
+            'levels' => $this->getDoctrine()->getRepository(Level::class)->findAll(),
+            'students' => $this->getDoctrine()->getRepository(Student::class)->findAll(),
+        ];
+
+        return $this->render('admin/adminStudents.html.twig', $_returneds);
+    }
+
+    /**
      * @Route("/admin/student/add/{id}", name="add_student")
      */
     public function addStudent($id, 
