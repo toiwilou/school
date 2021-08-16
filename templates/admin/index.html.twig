@@ -16,15 +16,15 @@
     }
 
     .header {
-        height: 100px;
-        background-color: #dfe8e8;
+        height: 80px;
+        background-color: #c5e0e0;
         position: fixed;
         width: 100%;
     }
 
     .bars {
-        width: 110px;
-        height: 100px;
+        width: 90px;
+        height: 80px;
     }
 
     .bars:hover {
@@ -33,8 +33,8 @@
     }
 
     .bars i {
-        font-size: 40px;
-        margin-top: 30px;
+        font-size: 30px;
+        margin-top: 25px;
     }
 
     .margin-dive-content {
@@ -61,23 +61,36 @@
     }
 
     .logo img {
-        height: 100px;
+        height: 80px;
     }
 
     .profile {
-        padding: 15px;
+        padding: 10px;
     }
 
     .camera {
         position: absolute;
-        margin-left: 50px;
-        margin-top: 48px;
+        margin-left: 43px;
+        margin-top: 38px;
+    }
+
+    .rotate {
+        -moz-transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+
+    .rotate.arrow-up {
+        -ms-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
     }
 
     .dive-drop-down {
         width: auto;
         position: fixed;
-        background-color: #f2f2f2;
+        background-color: #c5e0e0;
         right: 12%;
         border-radius: 0 0 5px 5px;
     }
@@ -89,7 +102,14 @@
 
     .dive-drop-down li {
         list-style-type: none;
+        color: #02472c;
         font-size: 20px;
+        padding: 5px 30px;
+    }
+
+    .dive-drop-down li:hover {
+        background-color: #e1f2eb;
+        cursor: pointer;
     }
 
     .dive-drop-down a {
@@ -109,6 +129,15 @@
         color: white;
         background-color: #108f77;
     }
+
+    .dive-table {
+        width:  100%;
+        overflow-x: auto;
+    }
+
+    .table {
+        width: 3000px;
+    }
 </style>
 
 <div class="header row">
@@ -121,18 +150,18 @@
         <div class="logo"><a href="{{ path("home") }}"><img src="{{ asset("/images/logo.png") }}"></a></div>
     </div>
     <div class="row profile col-sm-5">
-        <div style="padding: 22px 0 0 30px;" class="col-sm-9">
-            <h4 style="text-align: right; color: #0f5c26;"><span class="name-profile" style="cursor: pointer;">Hassane TOIWILOU<i style="margin: 0 15px;" class="fal fa-angle-down"></i></span></h4>
+        <div style="padding: 18px 0 0 30px;" class="col-sm-9">
+            <h5 style="text-align: right; color: #0f5c26;"><span class="name-profile" style="cursor: pointer;">Hassane TOIWILOU<i style="margin: 0 15px;" class="rotate rotate-profile fal fa-angle-down"></i></span></h5>
         </div>
         <div class="col-sm-3">
-            <div style="width: 70px; height: 70px;">
+            <div style="width: 60px; height: 60px;">
                 <i data-bs-toggle="modal" data-bs-target="#cameraModal" style="font-size: 18px;  color: rgba(7, 64, 24, 0.7); cursor: pointer;" class="fas fa-camera camera"></i>
-                <div style="width: 70px; height: 70px; border: 1px solid #bcd1d1; border-radius: 50%; background-image: url('{{ asset("images/profile/moi.jpg") }}'); background-repeat: no-repeat; background-size: cover;"></div>
+                <div style="width: 60px; height: 60px; border: 1px solid #bcd1d1; border-radius: 50%; background-image: url('{{ asset("images/profile/_profile.png") }}'); background-repeat: no-repeat; background-size: cover;"></div>
             </div>
         </div>
     </div>
 </div>
-<div style="height: 100px;"></div>
+<div style="height: 80px;"></div>
 <div class="dive-content">
     <div class="sidebar outside">
         
@@ -140,14 +169,14 @@
     <div class="dive-content-right">
         <div class="dive-drop-down _none">
             <ul>
-                <li data-bs-toggle="modal" data-bs-target="#profileModal"><button class="dropdown-item" type="button">Modifier mon profil</button></li>
-                <a href="{{ path("app_logout") }}"><li><button class="dropdown-item" type="button">Gérer les utilisateurs</button></li></a>
-                <a href="{{ path("app_logout") }}"><li><button class="dropdown-item" type="button">Déconnexion</button></li></a>
+                <li data-bs-toggle="modal" data-bs-target="#profileModal">Modifier mon profil</li>
+                <a href="{{ path("app_logout") }}"><li>Gérer les utilisateurs</li></a>
+                <a href="{{ path("app_logout") }}"><li>Déconnexion</li></a>
             </ul>
         </div>
         <div style="padding: 20px;">
-            <i style="font-size: 30px; color: #055e4d;" class="fas fa-arrow-alt-circle-right"></i>
-            <span style="font-size: 35px; margin-left: 20px; color: #035747;">Titre de la page en cours</span>
+            <i style="font-size: 20px; color: #055e4d;" class="fas fa-arrow-alt-circle-right"></i>
+            <span style="font-size: 25px; margin-left: 10px; color: #035747;">Titre de la page en cours</span>
             <div style="padding-top: 40px" class="row">
                 <div style="padding-left: 0;" class="col-sm-9">
                     <form method="POST">
@@ -165,167 +194,103 @@
                     <button class="btn btn-licence">Ajouter une licence</button>
                 </div>
             </div>
-            <table class="table">
-                <thead>
-                    <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style="background-color: #dfe8e8;">
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    </tr>
-                    <tr style="background-color: #ebf0ed;">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr style="background-color: #dfe8e8;">
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                    <tr style="background-color: #ebf0ed;">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr style="background-color: #dfe8e8;">
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                    <tr style="background-color: #ebf0ed;">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr style="background-color: #dfe8e8;">
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                    <tr style="background-color: #ebf0ed;">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr style="background-color: #dfe8e8;">
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                    <tr style="background-color: #ebf0ed;">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr style="background-color: #dfe8e8;">
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                    <tr style="background-color: #ebf0ed;">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr style="background-color: #dfe8e8;">
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                    <tr style="background-color: #ebf0ed;">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr style="background-color: #dfe8e8;">
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                    <tr style="background-color: #ebf0ed;">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr style="background-color: #dfe8e8;">
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                    <tr style="background-color: #ebf0ed;">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr style="background-color: #dfe8e8;">
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                    <tr style="background-color: #ebf0ed;">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr style="background-color: #dfe8e8;">
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                    <tr style="background-color: #ebf0ed;">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr style="background-color: #dfe8e8;">
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                    <tr style="background-color: #ebf0ed;">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr style="background-color: #dfe8e8;">
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                    <tr style="background-color: #ebf0ed;">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr style="background-color: #dfe8e8;">
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="dive-table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #c9c9c9;">
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        </tr>
+                        <tr style="background-color: #e6e6e6;">
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        </tr>
+                        <tr style="background-color: #c9c9c9;">
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        </tr>
+                        <tr style="background-color: #e6e6e6;">
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        </tr>
+                        <tr style="background-color: #c9c9c9;">
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        </tr>
+                        <tr style="background-color: #e6e6e6;">
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        </tr>
+                        <tr style="background-color: #c9c9c9;">
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        </tr>
+                        <tr style="background-color: #e6e6e6;">
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        </tr>
+                        <tr style="background-color: #c9c9c9;">
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        </tr>
+                        <tr style="background-color: #e6e6e6;">
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        </tr>
+                        <tr style="background-color: #c9c9c9;">
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        </tr>
+                        <tr style="background-color: #e6e6e6;">
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        </tr>
+                        <tr style="background-color: #c9c9c9;">
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        </tr>
+                        <tr style="background-color: #e6e6e6;">
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        </tr>
+                        <tr style="background-color: #c9c9c9;">
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
@@ -367,24 +332,30 @@
 </div>
 
 <script>
+    //https://htmldom.dev/drag-to-scroll/
     var diveDropDown = document.querySelector('.dive-drop-down');
     var nameProfile = document.querySelector('.name-profile');
     var bars = document.querySelector('.bars');
     var sidebar = document.querySelector('.sidebar');
     var diveContentRight = document.querySelector('.dive-content-right');
+    var dive = document.querySelector('#ma-dive');
+    var rotateProfile = document.querySelector('.rotate-profile');
 
     window.addEventListener('click', function(e){   
         if (nameProfile.contains(e.target)){
             if(diveDropDown.classList.contains('_none')){
                 diveDropDown.classList.remove('_none');
                 diveDropDown.classList.add('_block');
+                rotateProfile.classList.add('arrow-up');
             } else {
                 diveDropDown.classList.remove('_block');
                 diveDropDown.classList.add('_none');
+                rotateProfile.classList.remove('arrow-up');
             }
         } else{
             diveDropDown.classList.remove('_block');
             diveDropDown.classList.add('_none');
+            rotateProfile.classList.remove('arrow-up');
         }
 
         if (bars.contains(e.target)){
