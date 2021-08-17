@@ -39,7 +39,7 @@
 
     .margin-dive-content {
         transition: 0.4s;
-        margin-left: 300px;
+        margin-left: 280px;
     }
 
     .sidebar { 
@@ -51,13 +51,63 @@
 
     .inside {
         transition: 0.4s;
-        width: 300px;
+        width: 280px;
     }
 
     .outside {
-        width: 0;
+        margin-left: -280px;
+        margin-right: 280px;
         padding: 0;
         transition: 0.4s;
+    }
+
+    .sidebar-menu {
+        padding: 50px 30px;
+    }
+
+    .sidebar-menu ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar-menu li {
+        list-style-type: none;
+        color: white;
+        font-size: 19px;
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+    }
+
+    .sidebar-menu li a {
+        text-decoration: none;
+        display: block;
+        color: white;
+    }
+
+    .sidebar-menu li:hover {
+        cursor: pointer;
+        color: #c5e0e0;
+        margin-left: 3px;
+        transition: 0.2s;
+    }
+
+    .sidebar-menu li a:hover {
+        color: #c5e0e0;
+    }
+
+    .sidebar-menu li .fa-angle-right {
+        float: right;
+        margin-top: 15px;
+    }
+
+    .sidebar-menu li .left-i {
+        margin-right: 20px;
+    }
+
+    .sidebar .under-ul {
+        display: none;
+        margin-left: 50px;
     }
 
     .logo img {
@@ -83,9 +133,9 @@
     }
 
     .rotate {
-        -moz-transition: all 0.2s linear;
-        -webkit-transition: all 0.2s linear;
-        transition: all 0.2s linear;
+        -moz-transition: all 0.1s linear;
+        -webkit-transition: all 0.1s linear;
+        transition: all 0.1s linear;
     }
 
     .rotate.arrow-up {
@@ -93,6 +143,13 @@
         -moz-transform: rotate(-180deg);
         -webkit-transform: rotate(-180deg);
         transform: rotate(-180deg);
+    }
+
+    .rotate.arrow-down {
+        -ms-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
     }
 
     .dive-drop-down {
@@ -175,7 +232,43 @@
 <div style="height: 80px;"></div>
 <div class="dive-content">
     <div class="sidebar outside">
-        
+        <nav class="sidebar-menu">
+            <ul class="sidebar-ul">
+                <li>
+                    <a href="{{ path("home") }}"><i class="fas left-i fa-chart-line"></i> Dashboard</a>
+                </li>
+                <li class="rotate-menu-item">
+                    <i class="fas left-i fa-box"></i> Achats en cours
+                    <i class="fal rotate fa-angle-right sidebar-menu-arrow-right-1"></i>
+                </li>
+                <ul class="under-ul under-ul-1">
+                    <li><a href="{{ path("home") }}">Achats</a></li>
+                    <li><a href="{{ path("home") }}">Achats</a></li>
+                    <li><a href="{{ path("home") }}">Achats</a></li>
+                </ul>
+                <li class="rotate-menu-item">
+                    <i class="fas left-i fa-shipping-fast"></i>Livraisons
+                    <i class="fal rotate fa-angle-right sidebar-menu-arrow-right-2"></i>
+                </li>
+                <ul class="under-ul under-ul-2">
+                    <li><a href="{{ path("home") }}">Livraisons</a></li>
+                    <li><a href="{{ path("home") }}">Livraisons</a></li>
+                    <li><a href="{{ path("home") }}">Livraisons</a></li>
+                </ul>
+                <li class="rotate-menu-item">
+                    <i class="fas left-i fa-server"></i> Stock
+                    <i class="fal rotate fa-angle-right sidebar-menu-arrow-right-3"></i>
+                </li>
+                <ul class="under-ul under-ul-3">
+                    <li><a href="{{ path("home") }}">Stock</a></li>
+                    <li><a href="{{ path("home") }}">Stock</a></li>
+                    <li><a href="{{ path("home") }}">Stock</a></li>
+                </ul>
+                <li><a href="{{ path("home") }}">
+                    <i class="fal left-i fa-barcode-alt"></i>Codes projets</a>
+                </li>
+            </ul>
+        </nav>
     </div>
     <div class="dive-content-right">
         <div class="dive-drop-down _none">
@@ -368,11 +461,20 @@
     var nameProfile = document.querySelector('.name-profile');
     var bars = document.querySelector('.bars');
     var sidebar = document.querySelector('.sidebar');
+    var sidebarUl = document.querySelector('.sidebar-ul');
     var diveContentRight = document.querySelector('.dive-content-right');
     var dive = document.querySelector('#ma-dive');
     var rotateProfile = document.querySelector('.rotate-profile');
     var checkTogglePassword = document.querySelector('.check-toggle-password');
     var modalDivePassword = document.querySelector('.modal-dive-password');
+    var arrows = [];
+    var arrow = null;
+    var _arrow = null;
+    var ul = null;
+    var _ul = null;
+    var li = null;
+    var _li = null;
+    for(var i = 0; i < 3; i++){ arrows[i] = document.querySelector('.sidebar-menu-arrow-right-' + (i+1)); }
 
     checkTogglePassword.addEventListener('click', function(){
         if(checkTogglePassword.checked){
@@ -403,7 +505,7 @@
             if(sidebar.classList.contains('outside')){
                 sidebar.classList.remove('outside');
                 sidebar.classList.add('inside');
-                diveContentRight.style.marginLeft = '300px';
+                diveContentRight.style.marginLeft = '280px';
                 diveContentRight.style.transition = '0.4s';
             } else {
                 sidebar.classList.remove('inside');
@@ -416,6 +518,29 @@
             sidebar.classList.add('outside');
             diveContentRight.style.marginLeft = '0';
             diveContentRight.style.transition = '0.4s';
+        }
+    });
+
+    sidebarUl.addEventListener('click', function(_e) {
+        for (var j = 0; j < arrows.length; j++){
+            arrow = arrows[j];
+            li = arrow.parentNode;
+            ul = document.querySelector('.under-ul-' + (j+1));
+            if (li.contains(_e.target)){
+                if (arrow.classList.contains('arrow-down')) {
+                    arrow.classList.remove('arrow-down');
+                    ul.style.display = 'none';
+                } else {
+                    for (var k = 0; k < arrows.length; k++) {
+                        _ul = document.querySelector('.under-ul-' + (k+1));
+                        _ul.style.display = 'none'; 
+                        _arrow = arrows[k];
+                        _arrow.classList.remove('arrow-down');
+                    }
+                    arrow.classList.add('arrow-down');
+                    ul.style.display = 'block';
+                }
+            }
         }
     });
 </script>
