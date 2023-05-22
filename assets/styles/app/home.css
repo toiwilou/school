@@ -1,0 +1,12 @@
+@media screen {
+    
+}
+
+@media screen and (min-width: 900px) {
+    #home-slider {
+        margin-top: 1px;
+    }
+    #home-slider img {
+        width: 100%;
+    }
+}

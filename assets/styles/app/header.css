@@ -1,0 +1,99 @@
+@media screen {
+    
+}
+
+@media screen and (min-width: 900px) {
+    #header-app {
+        font-family: Georgia, serif;
+    }
+    #header-app .top {
+        display: flex;
+        justify-content: space-between;
+    }
+    #header-app .top {
+        margin: 0 15%;
+        padding: 20px 0;
+    }
+    #header-app .top > a {
+        text-decoration: none;
+    }
+    #header-app .top .logo {
+        display: flex;
+    }
+    #header-app .top .logo .img {
+        width: 80px;
+    }
+    #header-app .top .logo .img img {
+        width: 100%;
+    }
+    #header-app .top .logo .name {
+        margin-left: 15px;
+        color: #074b33;
+        width: 124px;
+    }
+    #header-app .top .logo .name .n-top {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    #header-app .top .logo .name .n-bottom {
+        font-size: 20px;
+    }
+    #header-app .top .you-are .btn {
+        background-color: rgba(20, 181, 133, 0.2);
+        font-size: 23px;
+        padding: 10px 30px;
+        color: #074b33;
+    }
+    #header-app .top .socials  {
+        display: flex;
+    }
+    #header-app .top .socials .icon {
+        align-self: flex-end;
+        font-size: 20px;
+        margin: 0 4px;
+    }
+    #header-app .top .socials .facebook a {
+        color: #0b6dd6;
+    }
+    #header-app .top .socials .instagram a {
+        color: #eb348c;
+    }
+    #header-app .top .socials .twitter a {
+        color: #27b9e6;
+    }
+    #header-app .top .socials .linked-in a {
+        color: #1141ba;
+    }
+    #header-app .bottom {
+        padding: 0 15%;
+        background-color: #14b585;
+    }
+    #header-app .bottom nav {
+        height: 50px;
+        line-height: 50px;
+    }
+    #header-app .bottom nav ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-align: center;
+    }
+    #header-app .bottom nav li {
+        font-size: 20px;
+        display: inline-block;
+        text-align: center;
+        width: 18%;
+    }
+    #header-app .bottom nav li a {
+        text-decoration: none;
+        display: block;
+        color: white;
+    }
+    #header-app .bottom nav li a:hover {
+        background-color: #58e8bd;
+    }
+}
+
+@media (max-width: 900px) {
+    
+}
