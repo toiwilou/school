@@ -23,6 +23,7 @@ Encore
     .addEntry('app', './assets/js/app/app.js')
     .addEntry('header', './assets/js/app/header.js')
     .addEntry('home', './assets/js/app/home.js')
+    .addEntry('profile', './assets/js/app/profile.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')

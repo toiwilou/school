@@ -38,12 +38,6 @@
     #header-app .top .logo .name .n-bottom {
         font-size: 20px;
     }
-    #header-app .top .you-are .btn {
-        background-color: rgba(20, 181, 133, 0.2);
-        font-size: 23px;
-        padding: 10px 30px;
-        color: #074b33;
-    }
     #header-app .top .socials  {
         display: flex;
     }
@@ -63,6 +57,43 @@
     }
     #header-app .top .socials .linked-in a {
         color: #1141ba;
+    }
+    #header-app .top .you-are .btn {
+        background-color: rgba(20, 181, 133, 0.3);
+        font-size: 23px;
+        padding: 10px 30px;
+        color: #074b33;
+    }
+    #header-app .top .list-content {
+        position: absolute;
+        right: 15%;
+        background-color: white;
+    }
+    #header-app .top .list-profiles-types {
+        padding: 15px;
+        background-color: rgba(20, 181, 133, 0.3);
+    }
+    #header-app .top .list-profiles-types .line {
+        display: flex;
+    }
+    #header-app .top .list-profiles-types .column-content {
+        margin: 15px;
+    }
+    #header-app .top .list-profiles-types .column {
+        display: flex;
+        width: 300px;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #074b33;
+        background-color: #f2f7f5;
+    }
+    #header-app .top .list-profiles-types .column i {
+        margin-right: 20px;
+        padding-top: 4px;
+    }
+    #header-app .top .list-profiles-types .column-content > a {
+        text-decoration: none;
     }
     #header-app .bottom {
         padding: 0 15%;
@@ -90,7 +121,7 @@
         color: white;
     }
     #header-app .bottom nav li a:hover {
-        background-color: #58e8bd;
+        background-color: #5dd1ae;
     }
 }
 

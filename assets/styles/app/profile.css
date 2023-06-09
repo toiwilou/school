@@ -1,0 +1,32 @@
+@media screen {
+    #home-profile {
+        background-color: #e8faf5;
+        display: flex;
+        padding: 40px 15%;
+    }
+    #home-profile .side-block {
+        background-color: white;
+        width: 30%;
+        border-radius: 10px;
+        padding: 25px;
+        margin-right: 30px;
+    }
+    #home-profile .side-block p {
+        text-align: center;
+        margin-top: 20px;
+    }
+    #home-profile .block-content {
+        flex: auto;
+    }
+    #home-profile .block-content .top {
+        background-color: white;
+        height: 200px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+    #home-profile .block-content .middle {
+        background-color: white;
+        height: 300px;
+        border-radius: 10px;
+    }
+}

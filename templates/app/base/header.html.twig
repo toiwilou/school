@@ -1,7 +1,7 @@
 {{ encore_entry_link_tags('header') }}
 <section id="header-app">
     <div class="top">
-        <a href="#">
+        <a href="{{ path('app_home') }}">
             <div class="logo">
                 <div class="img">
                     <img src="{{ asset('images/app/udc-logo.jpeg') }}">
@@ -39,6 +39,11 @@
                 <button class="btn">Vous êtes 
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
+            </div>
+            <div class="list-content none">
+                <div class="list-profiles-types shadow">
+                    {{ include('app/base/profiles.html.twig') }}
+                </div>
             </div>
         </div>
     </div>
