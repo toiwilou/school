@@ -1,0 +1,80 @@
+{
+    "0": {
+        "firstname": "",
+        "lastname": "",
+        "registration_number": "",
+        "roles": "ROLE_PRESIDENT"
+    },
+    "1": {
+        "firstname": "",
+        "lastname": "",
+        "registration_number": "",
+        "roles": "ROLE_DEAN"
+    },
+    "2": {
+        "firstname": "",
+        "lastname": "",
+        "registration_number": "",
+        "roles": "ROLE_DEAN"
+    },
+    "3": {
+        "firstname": "",
+        "lastname": "",
+        "registration_number": "",
+        "roles": "ROLE_DEAN"
+    },
+    "4": {
+        "firstname": "",
+        "lastname": "",
+        "registration_number": "",
+        "roles": "ROLE_DEAN"
+    },
+    "5": {
+        "firstname": "",
+        "lastname": "",
+        "registration_number": "",
+        "roles": "ROLE_HEAD_DEPARTMENT"
+    },
+    "6": {
+        "firstname": "",
+        "lastname": "",
+        "registration_number": "",
+        "roles": "ROLE_HEAD_DEPARTMENT"
+    },
+    "7": {
+        "firstname": "",
+        "lastname": "",
+        "registration_number": "",
+        "roles": "ROLE_HEAD_DEPARTMENT"
+    },
+    "8": {
+        "firstname": "",
+        "lastname": "",
+        "registration_number": "",
+        "roles": "ROLE_HEAD_DEPARTMENT"
+    },
+    "9": {
+        "firstname": "",
+        "lastname": "",
+        "registration_number": "",
+        "roles": "ROLE_HEAD_DEPARTMENT"
+    },
+    "10": {
+        "firstname": "",
+        "lastname": "",
+        "registration_number": "",
+        "roles": "ROLE_HEAD_DEPARTMENT"
+    },
+    "11": {
+        "firstname": "",
+        "lastname": "",
+        "registration_number": "",
+        "roles": "ROLE_HEAD_DEPARTMENT"
+    },
+    "12": {
+        "firstname": "",
+        "lastname": "",
+        "registration_number": "",
+        "roles": "ROLE_HEAD_DEPARTMENT"
+    }
+}

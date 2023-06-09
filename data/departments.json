@@ -1,0 +1,42 @@
+{
+    "0": {
+        "name": "Mathématiques, Physiques-Chimies et Informatiques",
+        "code": "UDC-DMPI",
+        "faculty": "UDC-FST"
+    },
+    "1": {
+        "name": "Medecine et Science Naturelle",
+        "code": "UDC-DMSN",
+        "faculty": "UDC-FST"
+    },
+    "2": {
+        "name": "Droit",
+        "code": "UDC-DDRT",
+        "faculty": "UDC-FDL"
+    },
+    "3": {
+        "name": "Lettre",
+        "code": "UDC-DLTR",
+        "faculty": "UDC-FDL"
+    },
+    "4": {
+        "name": "Gestions",
+        "code": "UDC-DGST",
+        "faculty": "UDC-FGE"
+    },
+    "5": {
+        "name": "Économie",
+        "code": "UDC-DECO",
+        "faculty": "UDC-FGE"
+    },
+    "6": {
+        "name": "Sciences Islamiques",
+        "code": "UDC-DSCI",
+        "faculty": "UDC-FSI"
+    },
+    "7": {
+        "name": "Littérature",
+        "code": "UDC-DLTT",
+        "faculty": "UDC-FSI"
+    }
+}

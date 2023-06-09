@@ -1,0 +1,26 @@
+{
+    "ROLE_PRESIDENT": [
+        "ROLE_PRESIDENT",
+        "ROLE_DEAN",
+        "ROLE_HEAD_DEPARTMENT",
+        "ROLE_ADMIN"
+    ],
+    "ROLE_DEAN": [
+        "ROLE_DEAN",
+        "ROLE_HEAD_DEPARTMENT",
+        "ROLE_ADMIN"
+    ],
+    "ROLE_HEAD_DEPARTMENT": [
+        "ROLE_HEAD_DEPARTMENT",
+        "ROLE_ADMIN"
+    ],
+    "ROLE_ADMIN": [
+        "ROLE_ADMIN"
+    ],
+    "ROLE_TEACHER": [
+        "ROLE_TEACHER"
+    ],
+    "ROLE_STUDENT": [
+        "ROLE_STUDENT"
+    ]
+}

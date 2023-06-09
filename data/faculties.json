@@ -1,0 +1,22 @@
+{
+    "0": {
+        "name": "Faculté des Sciences et Techniques",
+        "code": "UDC-FST",
+        "dean": ""
+    },
+    "1": {
+        "name": "Faculté de Droit et de Lettre",
+        "code": "UDC-FDL",
+        "dean": ""
+    },
+    "2": {
+        "name": "Faculté de Gestion et de L'Économie",
+        "code": "UDC-FGE",
+        "dean": ""
+    },
+    "3": {
+        "name": "Faculté des Sciences Islamiques",
+        "code": "UDC-FSI",
+        "dean": ""
+    }
+}
